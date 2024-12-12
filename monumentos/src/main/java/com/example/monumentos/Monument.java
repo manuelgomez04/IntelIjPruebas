@@ -5,11 +5,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Monuments {
+public class Monument {
     private Long id;
     private String countryName;
     private String monumentName;
@@ -18,5 +19,7 @@ public class Monuments {
     private String image;
     private double latitude;
     private double longitude;
-    private double countryIsoCode;
+    private String countryIsoCode;
+
+
 }
