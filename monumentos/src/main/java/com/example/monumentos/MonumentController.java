@@ -31,7 +31,7 @@ public class MonumentController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Monument> getyBYId(@PathVariable Long id) {
+    public ResponseEntity<Monument> getById(@PathVariable Long id) {
         return ResponseEntity.of(monumentRepository.get(id));
     }
 

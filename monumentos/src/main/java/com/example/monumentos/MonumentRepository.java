@@ -18,7 +18,7 @@ public class MonumentRepository {
                 .description("Monumento increíble").latitude(40.416775).longitude(-3.703790).image("http://example.com/bernabeu.jpg").build());
         add(Monument.builder().id(2L).monumentName("Camp Nou").cityName("Barcelona").countryIsoCode("ES").countryName("España")
                 .description("Monumento increíble").latitude(40.416775).longitude(-3.703790).image("http://example.com/bernabeu.jpg").build());
-        add(Monument.builder().id(3L).monumentName("Palacio de Vázquez de Molina").cityName("Úbeda").countryIsoCode("ES").countryName("España")
+        add(Monument.builder().id(3L).monumentName("Palacio de las Cadenas").cityName("Úbeda").countryIsoCode("ES").countryName("España")
                 .description("Monumento increíble").latitude(40.416775).longitude(-3.703790).image("http://example.com/bernabeu.jpg").build());
         add(Monument.builder().id(4L).monumentName("Mercado do Bolhao").cityName("Oporto").countryIsoCode("PT").countryName("Portugal")
                 .description("Monumento increíble").latitude(40.416775).longitude(-3.703790).image("http://example.com/bernabeu.jpg").build());
@@ -77,8 +77,8 @@ public class MonumentRepository {
         if (countryName.equalsIgnoreCase("all")) {
             result = data;
         } else {
-            result = data.stream().filter(m -> m.getCountryName()
-                    .equalsIgnoreCase(countryName)).collect(Collectors.toCollection(ArrayList::new));
+            result = data.stream().filter(m -> m.getCountryName().equalsIgnoreCase(countryName))
+                    .collect(Collectors.toCollection(ArrayList::new));
         }
 
         if (sortDirection.equalsIgnoreCase("asc")) {
